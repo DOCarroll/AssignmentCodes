@@ -27,33 +27,33 @@
             var sex = document.getElementById('sex').value;
             var mName = document.getElementById('mName').value;
             var sName;
-            var ran = Math.floor((Math.random()*2)+1);
+            var ran = Math.floor((Math.random()*3)+1);
 
             document.getElementById('street').innerHTML = street;
             document.getElementById('sex').innerHTML = sex;
             document.getElementById('mName').innerHTML = mName;
-            if(sex = "M")
+            if(sex == "M")
             {
-                if(ran = 1)
+                if(ran == 1)
                 {
                   co = "Pizza Boy ";
                 }
-                if(ran = 2)
+                if(ran == 2)
                 {co = "Pool Boy ";}
-                if(ran = 3)
+                if(ran == 3)
                 {co = "Officer"}
                 document.write(co," ",mName," ",street);
 
             }
             else
             {
-                if(ran = 1)
+                if(ran == 1)
                 {co = "School Girl ";}
-                if(ran = 2)
-                {co = "Miss";}
-                if(ran = 3)
-                {co = "Girl Next Door";}
-                document.write(co,"",mName,"",street);
+                if(ran == 2)
+                {co = "Miss ";}
+                if(ran == 3)
+                {co = "Girl Next Door ";}
+                document.write(co," ",mName," ",street);
 
 
             }
