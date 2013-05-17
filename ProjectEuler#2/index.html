@@ -1,0 +1,47 @@
+<html>
+
+    <head>
+
+        <title>Project Euler Problem #2</title>
+
+    </head>
+    <body>
+        <h2>Project Euler Problem #2: Number of Even Numbers in Fibonacci Sequence</h2>
+        <h3>(See Console Log)</h3>
+
+        <script src="js/main.js"></script>
+        <script>
+            //Set the initial variables equal to the first two numbers in the sequence, set variable D equal to 0 to prevent garbage
+            var A = 0;
+            var B = 1;
+            var D = 0;
+            //Log the initial numbers in the console
+            console.log("The Fibonacci Sequence:")
+            console.log(A);
+            console.log(B);
+            //Loop through 10 numbers in the sequence to keep the numbers small enough to function properly.
+            for(var i = 0; i <=10; i++)
+            {
+                //Calculate variable C, and check the remainder
+                var C = A + B;
+                var E = C % 2;
+                //Check to see if the number is even, if it is then add one to the even number count represented by var D
+                if(E == 0)
+                {
+                    D++;
+                }
+                //Log the new number in the console, and reassign variables to continue through the Fibonacci Sequence
+                console.log(C);
+                A = B;
+                B = C;
+            }
+            //Log the number of even variables
+            console.log("The Number of Even Numbers in the Fibonacci Sequence:", D);
+
+
+
+
+        </script>
+
+    </body>
+</html>

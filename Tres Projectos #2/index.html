@@ -1,0 +1,51 @@
+<html>
+
+    <head>
+
+        <title></title>
+
+    </head>
+    <body>
+        <script src="js/main.js"></script>
+
+    <script>
+    var today = new Date();
+    var day = today.getDate();
+    var month = today.getMonth() + 1;
+    var year = today.getFullYear();
+    if (day < 10){day = '0'+day}
+    if (month < 10){month = '0'+month}
+    today = "Today: "+month+'/'+day+'/'+year;
+    document.write(today);
+
+    var birthday = new Date();
+    var day2 = document.getElementById("day2");
+    var month2 = document.getElementById("month2");
+    var year2 = document.getElementById("year2");
+    birthday = month2+'/'+day2+'/'+year2;
+
+    var finalDate;
+    var finalDay;
+    var finalMonth;
+    var finalYear;
+    function Write()
+    {
+      finalYear = (year - year2);
+      document.write(finalYear);
+    }
+
+
+
+
+    </script>
+    <br /><span>Are you old enough to drink?</span>
+    <br /><span>What month were you born?: </span>
+    <input type="text" id="month2"><br />
+    <span>What day of the month were you born?: </span>
+    <input type="text" id="day2"><br />
+    <span>What year were you born?</span>
+    <input type="text" id="year2"><br />
+    <input type="button" value="Submit" onclick="Write()">
+
+    </body>
+</html>

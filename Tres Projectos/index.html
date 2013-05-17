@@ -1,0 +1,83 @@
+<html>
+
+    <head>
+
+        <title></title>
+
+    </head>
+    <body>
+
+        <script src="js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        function Combine(){
+            var street = document.getElementById('street').value;
+            var co;
+            var sex = document.getElementById('sex').value;
+            var mName = document.getElementById('mName').value;
+            var sName;
+            var ran = Math.floor((Math.random()*2)+1);
+
+            document.getElementById('street').innerHTML = street;
+            document.getElementById('sex').innerHTML = sex;
+            document.getElementById('mName').innerHTML = mName;
+            if(sex = "M")
+            {
+                if(ran = 1)
+                {
+                  co = "Pizza Boy ";
+                }
+                if(ran = 2)
+                {co = "Pool Boy ";}
+                if(ran = 3)
+                {co = "Officer"}
+                document.write(co," ",mName," ",street);
+
+            }
+            else
+            {
+                if(ran = 1)
+                {co = "School Girl ";}
+                if(ran = 2)
+                {co = "Miss";}
+                if(ran = 3)
+                {co = "Girl Next Door";}
+                document.write(co,"",mName,"",street);
+
+
+            }
+        }
+
+
+    </script>
+
+        <div>What's your Stripper Name?</div>
+        <span>What is the street you grew up on?: </span>
+        <input type = "text" id="street" value=""><br />
+        <span>Are you a Male or Female? (M or F): </span>
+        <input type="text" id="sex" value =""><br />
+        <span>What is your middle name?: </span>
+        <input type="text" id="mName" value=""><br />
+        <input type="button" value ="Submit" onclick="Combine()">
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

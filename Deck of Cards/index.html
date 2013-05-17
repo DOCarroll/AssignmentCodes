@@ -1,0 +1,101 @@
+<html>
+
+    <head>
+
+        <title>Deck of Cards</title>
+
+    </head>
+    <body>
+    <h2>Deck of Cards Assignment</h2>
+
+        <script src="js/main.js"></script>
+        <script>
+        var Deck = new Array();
+        var Suit = "None";
+        var Card = "none";
+        var counter = 0;
+
+            for (i = 0; i < 3; i++)
+            {
+                if(i == 0)
+                {Suit = "Hearts";}
+                if(i == 1)
+                {Suit = "Diamonds";}
+                if(i == 2)
+                {Suit = "Clubs";}
+                if(i == 3)
+                {Suit = "Spades";}
+
+
+                for(j = 1; j <=13; j++ )
+                {
+
+
+                  if(j == 1)
+                  {Card ="Ace";}
+                  if(j == 2)
+                  {Card = "Two";}
+                  if(j == 3)
+                  {Card = "Three";}
+                  if(j == 4)
+                  {Card = "Four";}
+                  if(j == 5)
+                  {Card = "Five";}
+                  if(j == 6)
+                  {Card = "Six";}
+                  if(j == 7)
+                  {Card = "Seven";}
+                  if(j ==8)
+                  {Card = "Eight";}
+                  if(j == 9)
+                  {Card = "Nine";}
+                  if(j == 10)
+                  {Card = "Ten";}
+                  if(j == 11)
+                  {Card = "Jack";}
+                  if (j == 12)
+                  {Card = "Queen";}
+                  if(j == 13)
+                  {Card = "King";}
+
+
+
+
+
+                 Deck[counter] = Card+ " of "+ Suit+"<br />";
+                 counter++;
+                }
+
+
+
+
+            }
+
+
+            for(i in Deck)
+            {
+              document.write(Deck[i]);
+
+            }
+
+            </script>
+            <script>
+            document.write("<br />");
+
+            var D1 = Math.floor((Math.random() *6) + 1);
+            var D2 = Math.floor((Math.random() *6) + 1);
+            var D3 = Math.floor((Math.random() *6) + 1);
+
+            document.write("Die one rolled: ", D1+"<br />");
+            document.write("Die two rolled: ", D2+"<br />");
+            document.write("Die three rolled: ",D3+"<br/>");
+            document.write("The sum is: ", (D1 + D2 + D3));
+
+
+
+
+
+        </script>
+
+    </body>
+</html>

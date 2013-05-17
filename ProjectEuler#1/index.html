@@ -1,0 +1,40 @@
+<html>
+
+    <head>
+
+        <title>Project Euler Problem # 1</title>
+
+
+
+    </head>
+    <body>
+        <h2>Project Euler Problem #1: Multiples of 3 and 5</h2>
+        <h3>(See Console Log)</h3>
+        <script src="js/main.js"></script>
+        <!-- Variable Sum will add all the numbers up -->
+        <script>
+
+        var sum = 0;
+            //Go through every number up to 1,000
+            for (i = 0; i <=1000; i++)
+            {
+                //Check to see if it is a multiple of Three or Five
+                if(i%5 == 0 || i%3 == 0)
+                {
+                    //If it is a multiple, add the number to the existing sum of multiples
+                    sum = sum+ i;
+                }
+
+
+
+            }
+               //After calculating the sum log it in the console
+               console.log("The sum of all numbers divisible by 5 and 3:",sum);
+
+
+
+
+        </script>
+
+    </body>
+</html>

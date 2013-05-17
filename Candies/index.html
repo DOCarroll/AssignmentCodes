@@ -1,0 +1,78 @@
+<html>
+
+    <head>
+        <title>Candies Game</title>
+
+
+
+    </head>
+    <body>
+
+        <script src="js/main.js"></script>
+
+    <script>
+    var candy = 0;
+    var toss = 0;
+    var eat = 0;
+
+    function eatCandy(){
+        eat = eat + candy;
+        candy = 0;
+        document.getElementById("eat").innerHTML = eat;
+    }
+    function throwCandy(){
+        if(candy < 10)
+        {
+            alert("You don't have enough Candy!")
+        }
+        else{
+        candy = candy - 10;
+        toss = toss + 10;
+        document.getElementById("toss").innerHTML = toss;
+        }
+    }
+
+    setInterval(function()
+    {
+        candy++;
+       document.getElementById('candy').innerHTML = candy;
+    }, 1000);
+
+
+    var inventory = new Array();
+        inventory[0] = new Array(4);
+        inventory[0][0] = "Nothing";
+        inventory[0][1] = "Nothing";
+        inventory[0][2] = "Nothing";
+        inventory[0][3] = "Nothing";
+        inventory[1][0] = "Nothing";
+        inventory[1][1] = "Nothing";
+        inventory[1][2] = "Nothing";
+        inventory[1][3] = "Nothing";
+      function callInventory()
+      {
+         for(i = 0; i <= 1; i++)
+         {
+             for(j=0;j<=3;j++)
+             {
+              document.write('inventory').innerHTML = inventory[i][j];
+
+             }
+         }
+
+      }
+
+
+
+    </script>
+        <span>You have </span><span id="candy"></span><span> Candies.</span><br />
+        <span>You have eaten </span><span id="eat"></span><span> Candies.</span><br />
+        <span>You threw away </span><span id="toss"></span><span> Candies.</span>
+        <doc id="inventory"></doc>
+        <br />
+    <input type="button" id="btn_eat" value="Eat Candy" onclick="eatCandy()">
+    <input type="button" id="btn_toss" value ="Throw 10 Candies on Ground" onclick="throwCandy()"><br />
+    <input type="button" id="btn_inventory" value="Inventory" onclick="callInventory()">
+
+    </body>
+</html>
